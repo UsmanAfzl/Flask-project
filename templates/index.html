@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
-</head>
-<body>
-    <h1>First page!</h1>
+
+    {% extends "layout.html" %}
+    {% block heading %}
+        First Page!
+    {% endblock %}
+
+    {% block body %}
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis facere commodi fugit, sequi deserunt pariatur earum accusantium mollitia quidem ut veniam optio inventore libero, deleniti molestias. Temporibus a quos nostrum.</p>
     <a href="{{ url_for('more') }}">See here!</a>
-   
-</body>
-</html>
+    {% endblock %}
