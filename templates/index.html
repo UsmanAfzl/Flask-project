@@ -6,10 +6,13 @@
     <title>My website</title>
 </head>
 <body>
-    {% if new_year %}
-    <h1>Yes! Happy new year!</h1>
-    {% else %}
-    <h1>No!</h1>
-    {% endif %}
+    <h1>Names</h1>
+    <ul>
+        {% for name in names %}
+        <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+    
+   
 </body>
 </html>
