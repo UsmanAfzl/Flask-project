@@ -5,7 +5,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/hi", methods=["POST"])
+@app.route("/hi", methods=["Get", "POST"])
 def more():
-    name = request.form.get("name")
-    return render_template("more.html", name=name)
+    if request.method == "GET":
+        return "Please submit the form instaed!"
+    else:
+        name = request.form.get("name")
+        return render_template("more.html", name=name)
