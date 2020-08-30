@@ -1,10 +1,10 @@
 
     {% extends "layout.html" %}
     {% block heading %}
-        Second Page!
+        Greetings page!
+    {% endblock %}
+
+    {% block body %}
+        Hello, {{name}}!
     {% endblock %}
     
-    {% block body %}
-    <p>doren hfha8e jajsdk</p>
-    <a href="{{ url_for('index') }}"> go to first page!</a>
-    {% endblock %}

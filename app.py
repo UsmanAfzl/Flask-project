@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
 app = Flask(__name__)
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/second")
+@app.route("/hi", methods=["POST"])
 def more():
-    return render_template("more.html")
+    name = request.form.get("name")
+    return render_template("more.html", name=name)
